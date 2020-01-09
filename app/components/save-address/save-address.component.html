@@ -1,0 +1,50 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>My saved Address</mat-card-title>
+    </mat-card-header>
+
+
+    <mat-card-content>
+      <mat-expansion-panel *ngFor="let item of address">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ item.header }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{item.locality}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <ng-template matExpansionPanelContent>
+          <mat-form-field>
+            <!-- have to implement ngif for changing label to input field when clicked on edit  -->
+            
+              <input matInput placeholder=[(item.buildingno)] class="example-full-width">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder=[(item.streetno)] class="example-full-width">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder=[(item.locality)] class="example-full-width">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder=[(item.pincode)] class="example-full-width">
+          </mat-form-field>
+
+
+        </ng-template>
+<mat-action-row>
+  <button mat-button ng-click="bubble=true">Edit</button>
+  <button mat-button>Remove</button>
+</mat-action-row>
+      </mat-expansion-panel>
+
+
+
+    </mat-card-content>
+
+
+  </mat-card>
+
+</div>

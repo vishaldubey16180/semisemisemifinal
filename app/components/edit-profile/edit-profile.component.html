@@ -1,0 +1,55 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title><h2>Edit Profile</h2></mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form">
+      <mat-card-content>
+
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Email ID</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Contact No</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <div>
+          <app-save-address></app-save-address>
+        </div>
+        <button mat-stroked-button color="primary" class="btn-block" [routerLink]="'/addaddress'">Add New</button>
+
+      
+      </mat-card-content>
+      <button mat-stroked-button color="primary" class="btn-block">Confirm</button>
+    </form>
+  </mat-card>
+
+</div>

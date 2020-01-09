@@ -1,0 +1,30 @@
+<<!--div>
+
+  <app-app-navigation></app-app-navigation>
+  
+</div>-->
+
+
+
+<div>
+  <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" [color]="primary" [backgroundColor]="">
+    <mat-tab label="Who are we?">
+      <ng-template matTabContent>
+        <h2>none of your fucking buisness</h2>
+        Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Why you should care?">
+      <ng-template matTabContent>
+        <h2> Go on don't care! its your loss</h2>
+        Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Our Branch Offices">
+      <ng-template matTabContent>
+        <h2>kya karega jaan ke ?</h2>
+        Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+  </div>

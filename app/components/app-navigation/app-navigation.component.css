@@ -1,0 +1,11 @@
+/*.background {
+  background-image: url(https://www.uparcel.co/images/parallax_bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+.spacer {
+  flex: 1 1 auto;
+}*/

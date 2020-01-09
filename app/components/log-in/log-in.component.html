@@ -1,0 +1,39 @@
+
+
+
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+
+    <span class="spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/home'"><h1>PackXprez</h1> </a>
+      <a mat-button [routerLink]="'/register'">Register </a>
+      <a mat-button [routerLink]="'/track'">Track </a>
+      <button mat-button [matMenuTriggerFor]="menu">Login</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="'/login'">User Login</button>
+        <button mat-menu-item [routerLink]="'/officerlogin'">Employee Login</button>
+      </mat-menu>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation">
+    <mat-nav-list>
+      <a mat-list-item routerLink='/home'>Home</a>
+      <a mat-list-item routerLink='/register'>Register</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <app-home-page></app-home-page>
+      <!--<router-outlet></router-outlet>-->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

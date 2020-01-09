@@ -1,0 +1,34 @@
+
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <h1>PackXprez</h1>
+    <span class="menu-spacer"></span>
+    <div>
+     <a mat-button [routerLink]="'/home'">PackXprez</a>
+     <a mat-button [routerLink]="'/home'">Logout</a>
+   </div>
+</mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation">
+    <mat-nav-list>
+     <a mat-list-item routerLink='/edituser'>Edit Profile</a>
+     <a mat-list-item routerLink='/schedule'>Schedule Shipment</a>
+      <button mat-button [matMenuTriggerFor]="menu">Saved Addresss</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="'/address'">View</button>
+        <button mat-menu-item [routerLink]="'/addaddress'">Add</button>
+      </mat-menu>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <app-log-in></app-log-in>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
